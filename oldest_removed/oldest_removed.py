@@ -2,4 +2,4 @@
 
 import subprocess
 
-
+subprocess.call(["rpm","-qa"])
