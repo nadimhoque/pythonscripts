@@ -2,12 +2,16 @@
 
 import subprocess
 import re
+import string
 
 kernellist = []
 #subprocess.call(["rpm","-qa"])
 
 def oldestkernel(kernellist):
-	print "hello"
+	#kernelout = re.search('(^kernel)',kernellist)
+	#kernelout.group(0)
+	print kernellist
+	
 
 
 rpmout = subprocess.Popen(('rpm','-qa'),stdout=subprocess.PIPE)
@@ -15,4 +19,7 @@ rpmout = subprocess.Popen(('rpm','-qa'),stdout=subprocess.PIPE)
 #kernels = subprocess.Popen(('grep','kernel-[0-9]'),stdin=rpmout.stdout.read())
 
 for items in iter(rpmout.stdout.readline, ''):
-	print items
+	if "kernel" in items:
+		kernellist.append(items.split("\n"))
+
+oldestkernel(kernellist)
