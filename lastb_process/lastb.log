@@ -535,5 +535,3 @@ guest    ssh:notty    114.55.74.88     Sat Mar 18 05:54 - 05:54  (00:00)
 support  ssh:notty    152.204.24.166   Sat Mar 18 04:22 - 04:22  (00:00)    
 admin    ssh:notty    208.167.254.70   Sat Mar 18 03:39 - 03:39  (00:00)    
 usuario  ssh:notty    183.93.254.119   Sat Mar 18 03:39 - 03:39  (00:00)    
-
-btmp begins Sat Mar 18 03:39:14 2017
