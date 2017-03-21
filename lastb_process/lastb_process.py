@@ -1,11 +1,16 @@
 #!/usr/bin/python
 import hostpro
 
+def hostlistprint():
+	print "Please select One of the following options:"
+	print "1: All hostnames and IP addresses"
+	print "2: Only IP addresses"
+	print "3: Only hostnames"
 
 def printmenu():
 	print "Please select the following"
 	print "1: Get all the users who attempted to login"
-	print "2: Get all of the hostnames/IP addresses who attempted to log in"
+	print "2: Hostname/IP information (This will display another menu"
 	print "3: Get the start time of the login attempt"
 	print "4: Print the whole log as is"
 	print "q: Exits the program"
@@ -16,6 +21,7 @@ def main():
 	user = []
 	time = []
 	selection = "g"
+	hostsel = "g"
 
 # the below lines are simply parsing the colums
 	log = open('lastb.log','r')
@@ -35,7 +41,12 @@ def main():
 			hostpro.userlist(user)
 
 		if selection == "2":
-			hostpro.hostlist(hostnames)
+			hostlistprint()
+			hostsel = raw_input("Please enter one of the following:")
+			if hostsel == "1":
+				hostpro.hostlist(hostnames)
+			if hostsel == "2":
+				hostpro.iponly(hostnames)
 
 	log.close()
 
