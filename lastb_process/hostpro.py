@@ -1,14 +1,15 @@
 #!/usr/bin/python
 
-def hostlist(iplist):
+def hostlist(mainlist):
 	host = []
-	host.append(iplist)
-			
+	for items in mainlist:
+		if items not in host:
+			host.append(items)
 	print host
 			
-def hostcount(iplist):
-	ipcount = []
-	
-	
-
-	
+def userlist(mainlist):
+	users = []
+	for items in mainlist:
+		if items not in users:
+			users.append(items)
+	print users
