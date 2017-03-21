@@ -1,6 +1,14 @@
 #!/usr/bin/python
 
-def addtomainiplist(frommain):
-	mainiplist = []
-	mainiplist.append(frommain)
-	print mainiplist
+def hostlist(iplist):
+	host = []
+	host.append(iplist)
+			
+	print host
+			
+def hostcount(iplist):
+	ipcount = []
+	
+	
+
+	
