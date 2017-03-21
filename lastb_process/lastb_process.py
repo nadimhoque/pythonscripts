@@ -10,7 +10,7 @@ def hostlistprint():
 def printmenu():
 	print "Please select the following"
 	print "1: Get all the users who attempted to login"
-	print "2: Hostname/IP information (This will display another menu"
+	print "2: Hostname/IP information (This will display another menu)"
 	print "3: Get the start time of the login attempt"
 	print "4: Print the whole log as is"
 	print "q: Exits the program"
