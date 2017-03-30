@@ -57,7 +57,7 @@ def main():
                 print "Running Numberof function"
                 hostpro.numberof(hostnames)
 
-		if selection == "4":
+        if selection == "4":
 			log.seek(0)
 			for lines in log:
 				print lines
