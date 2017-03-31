@@ -1,14 +1,15 @@
 #!/usr/bin/python
 import hostpro
-
+import userpro
 
 def hostlistprint():
     print "Please select One of the following options:"
     print "1: All hostnames and IP addresses"
     print "2: Only IP addresses"
     print "3: Only hostnames"
-    print "4: Number of occurances"
-
+    print "4: Print number of occurances of IP and hostnames"
+    print "5: Print numer of IP occurances"
+    print "6: Print number of hostname occurances"
 
 def printmenu():
     print "Please select the following"
@@ -16,6 +17,7 @@ def printmenu():
     print "2: Hostname/IP information (This will display another menu)"
     print "3: Get the start time of the login attempt"
     print "4: Print the whole log as is"
+    print "5: Print number of user occurances"
     print "q: Exits the program"
 
 
@@ -42,7 +44,7 @@ def main():
         selection = raw_input("Please enter your selection now:")
 
         if selection == "1":
-            hostpro.userlist(user)
+            userpro.userlist(user)
 
         if selection == "2":
             hostlistprint()
@@ -54,13 +56,19 @@ def main():
             if hostsel == "3":
                 hostpro.hostonly(hostnames)
             if hostsel == "4":
-                print "Running Numberof function"
-                hostpro.numberof(hostnames)
+                hostpro.occurofhostip(hostnames)
+            if hostsel == "5":
+                hostpro.occurofip(hostnames)
+            if hostsel == "6":
+                hostpro.occurofhost(hostnames)
 
         if selection == "4":
-			log.seek(0)
-			for lines in log:
-				print lines
+            log.seek(0)
+            for lines in log:
+                print lines
+
+        if selection == "5":
+            userpro.useroccur(user)
 
     log.close()
 
